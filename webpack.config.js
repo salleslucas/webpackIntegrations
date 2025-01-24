@@ -16,10 +16,16 @@ module.exports = {
                 ]
             },
             {
+                test: /\.scss$/,
+                use: [
+                    'style-loader', 'css-loader', 'sass-loader'
+                ]
+            },
+            {
                 test: /\.(ttf|woff|woff2|eot|otf)$/,
                 type: 'asset/resource',
                 generator: {
-                    filename: 'fonts/[name][ext]', // Salva as fontes na pasta "fonts"
+                    filename: 'fonts/[name][ext]', 
                 },
             },
         ]
